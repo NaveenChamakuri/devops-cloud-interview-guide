@@ -1,0 +1,6 @@
+1. i cerate a VPC and asign a CIDR range as per the project requirements
+2. i create 2 subnets under the VPC--- 1.public 2.private
+3.public sunet connetct to the router to route the traffic from the internet, it route the traffic through the I/G.
+4.private s/n does not have the I/G, because it not expose the internet, here private s/n used for app servers or DB. generally, inside the private s/n I create a no.of Vm's these vm connected to App-server, App-server connect to DB server
+   prvate s/n>>> Vm1 Vm2 Vm3 >>>App-server>>DB server.
+5.usuelly public s/n will recieve the rquest from the internet and send to the VM which is located in the private s/n, vm sent info to app server , then app server send info to DB, now DB will gives the info to APP server>>vm>>pub s/n>>internet
